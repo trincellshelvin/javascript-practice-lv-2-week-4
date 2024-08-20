@@ -119,8 +119,16 @@ for (let i = 0; i < createLibrary.length; i++){
 //     console.log(`New due date for "${exampleTaskList[i].description}": ${exampleTaskList[i].dueDate}`);
 // }
 
-// TODO: Now, you try rescheduling your own tasks!
 
+// TODO: Now, you try rescheduling your own tasks!
+let newTaskList = [];
+newTaskList.push(createTask('finish pet owner form javascript', '2024-08-19'));
+newTaskList.push(createTask('finish Javascript Practice week4 day', '2024-08-19'));
+newTaskList.push(createTask('Setup Day2 files', '2024-08-20'));
+
+for(let i = 0; i <newTaskList.length; i++){
+    let previousDate = newDate 
+}
 
 // EXERCISE 5: Counting Completed Tasks
 // INSTRUCTIONS: Create an empty array called `taskList`.
