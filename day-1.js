@@ -163,7 +163,35 @@ function createTask(description, dueDate) {
 
 // TODO: Now, you try counting the completed tasks in your own task list!
 let tasklist = [];
-tasklist.push(createTask('Cook Dinner', 2024-8-21));
+tasklist.push(createTask('Cook Dinner', '2024-08-21'));
+tasklist.push(createTask('Give Dogs Baths', '2024-08-22'));
+tasklist.push(createTask('Review Assignment for Errors', '2024-09-23'));
+
+tasklist[0].completeTask();
+tasklist[1].completeTask();
+
+let completedCount = 0;
+for (let i = 0; i < tasklist.length; i++) {
+    if (tasklist[i].completed) {
+        completedCount++;
+    }
+}
+
+console.log(`Number of completed tasks: ${completedCount}`);
+
+function createTask(description, dueDate) {
+    return {
+        description,
+        dueDate,
+        completed: false,
+        completeTask: function() {
+            this.completed = true;
+        }
+    };
+}
+
+
+
 
 // Great job! You've completed the exercises.
 // Feel free to experiment further with the factory functions and loops to create more complex arrays and interactions.
