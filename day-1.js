@@ -127,10 +127,14 @@ newTaskList.push(createTask('finish Javascript Practice week4 day', '2024-08-19'
 newTaskList.push(createTask('Setup Day2 files', '2024-08-20'));
 
 for (let i = 0; i < newTaskList.length; i++) {
-    let previousDate = new Date(newTaskList[i].previousDate);
+    let previousDate = new Date(newTaskList[i].dueDate);
     let newDate = new Date(previousDate.setDate(previousDate.getDate() + 1));
     newTaskList[i].dueDate = newDate.toISOString().split('T')[0];
     console.log(`New due date for "${newTaskList[i].description}": ${newTaskList[i].dueDate}`);
+}
+
+function createTask(description, dueDate) {
+    return { description, dueDate };
 }
 
 
@@ -158,7 +162,8 @@ for (let i = 0; i < newTaskList.length; i++) {
 // console.log(`Number of completed tasks: ${completedCount}`);
 
 // TODO: Now, you try counting the completed tasks in your own task list!
-
+let tasklist = [];
+tasklist.push(createTask('Cook Dinner', 2024-8-21));
 
 // Great job! You've completed the exercises.
 // Feel free to experiment further with the factory functions and loops to create more complex arrays and interactions.
