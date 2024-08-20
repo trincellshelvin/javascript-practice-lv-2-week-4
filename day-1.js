@@ -65,7 +65,14 @@ function createTask(description, dueDate) {
 // }
 
 // TODO: Now, you try building your own task list and marking each task as completed!
+let bookCollection = [];
+bookCollection.push(createBook("Don't Get Stuck On Stupid! Leadership in Action", "Lt General Russell Honore", 2017));
+bookCollection.push(createBook("Leadership in the New Normal: A Short Course", "Lt General Russell Honore", 2012));
+bookCollection.push(createBook("JavaScript from Beginner to Professional: Learn JavaScript quickly by building fun, interactive, and dynamic web apps, games, and pages", "Laurence Lars Svekis, Maaike Van Putten, Rob Percival", 2021));
 
+for(let i=0; i<bookCollection.length; i++){
+    bookCollection[i].showDetails();
+}
 
 // EXERCISE 3: Updating Book Titles
 // INSTRUCTIONS: Create an empty array called `library`.
@@ -84,7 +91,15 @@ function createTask(description, dueDate) {
 // }
 
 // TODO: Now, you try updating the titles of your own library!
+let createLibrary = [];
+bookCollection.push(createBook("Don't Get Stuck On Stupid! Leadership in Action", "Lt General Russell Honore", 2017));
+bookCollection.push(createBook("Leadership in the New Normal: A Short Course", "Lt General Russell Honore", 2012));
+bookCollection.push(createBook("JavaScript from Beginner to Professional: Learn JavaScript quickly by building fun, interactive, and dynamic web apps, games, and pages", "Laurence Lars Svekis, Maaike Van Putten, Rob Percival", 2021));
 
+for (let i = 0; i < createLibrary.length; i++){
+    createLibrary[i].title += '- Second Edition';
+    createLibrary[i].showDetails();
+}
 
 // EXERCISE 4: Rescheduling Tasks
 // INSTRUCTIONS: Create an empty array called `taskList`.
