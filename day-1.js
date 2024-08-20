@@ -126,9 +126,13 @@ newTaskList.push(createTask('finish pet owner form javascript', '2024-08-19'));
 newTaskList.push(createTask('finish Javascript Practice week4 day', '2024-08-19'));
 newTaskList.push(createTask('Setup Day2 files', '2024-08-20'));
 
-for(let i = 0; i <newTaskList.length; i++){
-    let previousDate = newDate 
+for (let i = 0; i < newTaskList.length; i++) {
+    let previousDate = new Date(newTaskList[i].previousDate);
+    let newDate = new Date(previousDate.setDate(previousDate.getDate() + 1));
+    newTaskList[i].dueDate = newDate.toISOString().split('T')[0];
+    console.log(`New due date for "${newTaskList[i].description}": ${newTaskList[i].dueDate}`);
 }
+
 
 // EXERCISE 5: Counting Completed Tasks
 // INSTRUCTIONS: Create an empty array called `taskList`.
