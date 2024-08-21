@@ -5,8 +5,12 @@
 // Let's start by creating the global `state` object.
 // Note: You don't have to create another state object. Only one `state` object will exist in this file. That is why we call it "global"
 
-let state = {};
-
+let state = {
+    
+};
+let name = "Trincell Shelvin",
+email = "trin@interesting.com",
+zipCode = "70806";
 // EXERCISE 1: Updating Basic Information
 // INSTRUCTIONS: Add properties `name`, `email`, and `zipCode` to the `state` object and assign them appropriate values.
 // Then, log the entire `state` object to the console using `console.log` and `console.table`.
@@ -25,7 +29,14 @@ let state = {};
 // console.log('Zip Code:', state.zipCode);
 
 // TODO: Now, you try updating the `state` object with your own values for `name`, `email`, and `zipCode`!
-
+state.name = 'Trincell Shelvin';
+state.email = 'trin@interesting.com';
+state.zipCode = '70806';
+console.log('state', state);
+console.table(state);
+console.log('name:', state.name);
+console.log('email:', state.email);
+console.log('zip code:', state.zipCode);
 
 // EXERCISE 2: Adding More Personal Information
 // INSTRUCTIONS: Add properties `age`, `phoneNumber`, and `address` to the `state` object and assign them appropriate values.
