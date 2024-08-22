@@ -43,7 +43,13 @@ people.push({ firstName: 'Emily', lastName: 'Johnson' });
 
 
 // TODO: Write your code here to aggregate the first names from the `people` array.
-
+let firstName = '';
+for(let i = 0; i < firstName.length; i++){
+    firstName += firsname[i].name;
+    if (i < firstName.length - 1){
+        fistName += ',';
+    }
+}
 
 // EXERCISE 2: Aggregating Last Names
 // INSTRUCTIONS: Use a for loop to aggregate all the `lastName` values into a single string, separated by commas.
