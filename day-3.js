@@ -41,15 +41,16 @@ people.push({ firstName: 'John', lastName: 'Doe' });
 people.push({ firstName: 'Jane', lastName: 'Smith' });
 people.push({ firstName: 'Emily', lastName: 'Johnson' });
 
-
-// TODO: Write your code here to aggregate the first names from the `people` array.
-let firstName = '';
-for(let i = 0; i < firstName.length; i++){
-    firstName += firsname[i].name;
-    if (i < firstName.length - 1){
-        fistName += ',';
+// Aggregate the first names from the `people` array.
+let peopleName = '';
+for (let i = 0; i < people.length; i++) {
+    peopleName += people[i].firstName;
+    if (i < people.length - 1) {
+        peopleName += ', ';
     }
 }
+console.log(peopleName);
+
 
 // EXERCISE 2: Aggregating Last Names
 // INSTRUCTIONS: Use a for loop to aggregate all the `lastName` values into a single string, separated by commas.
@@ -62,8 +63,14 @@ employees.push({ firstName: 'Bob', lastName: 'White' });
 employees.push({ firstName: 'Charlie', lastName: 'Green' });
 
 // TODO: Write your code here to aggregate the last names from the `employees` array.
-
-
+let employeeName = '';
+for(let i = 0; i < employees.length; i++){
+    employeeName += employees[i].lastName;
+    if (i < employees.length - 1){
+        employeeName += ',';
+    }
+}
+console.log(employeeName);
 // EXERCISE 3: Aggregating Product Names
 // INSTRUCTIONS: Use a for loop to aggregate all the `productName` values into a single string, separated by commas.
 // Log the resulting string to the console.
